@@ -1,0 +1,503 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /* border:solid 1px; */
+}
+
+:root {
+    font-size: 18px;
+    --clr: rgba(82, 156, 198, 0.922);
+    --bg: white;
+    background-color: black;
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+
+
+.header {
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    }
+
+.nav {
+    display: flex;
+    font-size: .8rem;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    width: 100%;
+    background-color: var(--clr);
+    z-index: 10;
+
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo-img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.signup input {
+    margin-right: 20px;
+    padding: 3px;
+
+}
+
+li:hover {
+    background-color: whitesmoke;
+}
+
+
+.home {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.home-img img {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.home p {
+    color: black;
+}
+
+.content {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    position: relative;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.box h3 {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
+}
+
+.features h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.about {
+    padding-bottom: 30px;
+}
+
+.about,
+.games ,
+.faq h1,
+p, h3 {
+    text-align: center;
+    color: white;
+}
+
+.about span {
+    color: var(--clr);
+    font-size: 2.3rem;
+}
+
+hr {
+    color: lightgrey;
+}
+
+.top-games span {
+    color: var(--clr);
+    font-size: 2.3rem;
+}
+.faq span
+{
+    color: var(--clr);
+    font-size: 2.3rem; 
+}
+.games {
+    padding: 25px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: calc(20% - 20px); ;
+    position: relative;
+
+}
+
+.game img {
+    width: 100%;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.faq {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+
+.questions {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.que {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--clr);
+    cursor: pointer;
+    margin: 5px 0;
+    color: white;
+}
+
+.response  {
+    display: none;
+    padding: 10px;
+    /* background-color: white; */
+    color: white;
+    border: 1px solid var(--clr);
+    margin-bottom: 5px;
+}
+
+.fa-plus, .fa-minus {
+    transition: transform 0.3s;
+}
+
+.que.active .fa-plus {
+    display: none;
+}
+
+.que.active .fa-minus {
+    display: inline;
+}
+.footer {
+    background-color: rgba(82, 156, 198, 0.5);; /* Use the primary color for the footer background */
+    padding: 20px 0;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .app {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    align-items: center;
+    gap: 10px; 
+    margin: 10px 0; 
+  
+}
+
+.footer .app i {
+    font-size: 1.5rem; 
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: white; 
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline; 
+}
+@media (max-width: 480px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        height: 10vh;
+        width: 100%;
+        
+    }
+    a
+    {
+        font-size:0.7em;
+    }
+    .logo , .signup
+    {
+        padding-top: 30px;
+    }
+    .nav {
+        flex-direction: row;
+        align-items: flex-end;
+        height: 10vh;
+        /* width: 100%; */
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        width: 33.3%;
+        text-align: center;
+    }
+.home
+{
+    height: 50vh;
+}
+
+    .home img {
+        width: 100%;
+        height: auto;
+    }
+    .content {
+        text-align: center;
+        color: rgb(0, 0, 0);
+        z-index: 1;
+    }
+    
+    .boxes {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .box {
+        width: 100%;
+    }
+    .game {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: calc(50% - 20px); ;
+        position: relative;
+    
+    }
+
+    .footer .app {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer .app p {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    .logo , .signup
+    {
+        padding-top: 45px;
+    }
+
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        width: 33.30%;
+        text-align: center;
+    }
+
+    .home img {
+        width: 100%;
+        height:500px;
+    }
+    .content {
+        width: 100%;
+        
+    }
+
+    .boxes {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .box
+    {
+        width: 100%;
+        height: auto;
+    }
+    .game {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: calc(33.333% - 20px); ;
+        position: relative;
+    
+    }
+
+    .footer .app {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer .app p {
+        margin-right: 10px;
+    }
+} 
+/*
+@media (min-width: 768px) {
+    .home {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .home img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        width: 50%;
+    }
+
+    .features, .about, .games, .faq {
+        padding: 40px;
+    }
+
+    .boxes {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .box {
+        width: 30%;
+    }
+.game {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: calc(25% - 20px); ;
+        position: relative;
+    
+    }
+    .footer .app {
+        width: 300px;
+        justify-content: space-between;
+    }
+}  */
+
+/* @media (min-width: 1024px) {
+    .home {
+        position: relative;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    
+    .home-img img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+} */
+    
